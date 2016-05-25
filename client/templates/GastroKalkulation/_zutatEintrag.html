@@ -1,0 +1,124 @@
+
+<template name="_zutatHauptbestandteil">
+    <td>
+    <label>Hauptkomponente: </label></td><td>
+    <select class="form-select" id="Hauptbestandteil">
+      {{#each hauptbestandteil1}}
+        {{> _zutatSelect}}
+      {{/each}}
+    </select>
+  </td>
+  <td>
+    <select class="form-select-klein" id="GewichtHauptbestandteil">
+    {{#each gewicht}}
+     {{> _zutatSelect}}
+    {{/each}}
+
+    </select>
+</td><td>
+    <input class="form-input-mini" value="1.00" id="kilopreisHauptkomponente">
+    <!--<select class"form-select-ziffer" id="Preis"> -->
+    </td>
+
+</template>
+
+<template name="_zutatGarnitur">
+   <td>
+  <label>Garnitur: </label></td><td>
+    <select class="form-select" id="Garnitur">
+      {{#each garnitur1}}
+        {{> _zutatSelect}}
+      {{/each}}
+    </select>
+  </td>
+  <td></td><td>
+    <input class="form-input-mini" value="1.00" id="kilopreisGarnitur">
+    <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+  </td>
+
+
+</template>
+
+
+<template name="_zutatSaettigung">
+    <td>
+<label>Sättigungsbeilage: </label></td><td>
+    <select class="form-select" id="Saettigung1">
+      {{#each saettigung1}}
+        {{> _zutatSelect}}
+      {{/each}}
+    </select>
+
+  </td>
+  <td>
+    <select class="form-select-klein" id="GewichtSaettigung1">
+    {{#each gewicht}}
+     {{> _zutatSelect}}
+    {{/each}}
+   </select>
+ </td>
+ <td>
+   <input class="form-input-mini" value="1.00" id="kilopreisSaettigung1">
+ </td>
+
+</template>
+
+<template name="_zutatGemuese">
+    <td>
+    <label>Gemüse: </label></td><td>
+    <select class="form-select" id="Gemuese1">
+      {{#each gemuese1}}
+        {{> _zutatSelect}}
+      {{/each}}
+    </select>
+
+</td>
+<td>
+    <select class="form-select-klein" id="GewichtGemuese1">
+    {{#each gewicht}}
+     {{> _zutatSelect}}
+    {{/each}}
+    </select>
+</td>
+<td>
+    <input class="form-input-mini" value="1.00" id="kilopreisGemuese1">
+</td>
+
+</template>
+
+<template name="_zutatSauce">
+  <td>
+    <label>Sauce: </label></td><td>
+    <select class="form-select" id="Sauce">
+      {{#each sauce}}
+      <option value="{{_id}}">{{Zutat}}</option>
+
+      <!--console.log("sauceB.Artikelnummer "+ {{sauceB.Artikelnummer}} + " - " + {{this}}); -->
+        <!--{{> _zutatSelect}}-->
+      {{/each}}
+    </select>
+  </td>
+  <td></td>
+  <!--  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+    <!--
+    <select class="form-select" id="GewichtSaettigung1">
+    {{#each gewicht}}
+     {{> _zutatSelect}}
+    {{/each}} -->
+    <td>
+    <input class="form-input-mini" value="1.00" id="kilopreisSauce">
+  </td>
+
+</template>
+
+
+
+<template name="_zutatSelect">
+  <!--<option value="{{this}}">{{this}}</option> -->
+ <option value="{{_id}}">{{Zutat}}</option>
+<!--  <option id="{{_id}}">{{Zutat}}</option> -->
+</template>
+
+<template name="_zutatPreis">
+  <input value="1.00" id="kilopreis">
+</template>

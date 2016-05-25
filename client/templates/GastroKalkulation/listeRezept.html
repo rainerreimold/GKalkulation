@@ -1,0 +1,36 @@
+<template name="rezeptListe">
+  <div class="panel panel-default pizza">
+    <div class="panel-body">
+
+  <table class="table table-bordered">
+       <thead>
+         <tr>
+           <th>Rezept</th>
+           <th>Preis</th>
+        <!--   <th>Art der Beilage</th>
+           <th>Verarbeitungsstand</th>
+           <th>Gewicht</th> -->
+         </tr>
+       </thead>
+       <tbody>
+
+
+  {{#each rezepte}}
+  <tr>
+
+
+
+    {{> rezept}}
+  </tr>
+  {{else}}
+    {{#if isProfile}}
+      <p class="alert alert-info">You don't have any custom pizzas, cadet. Order now to add one.</p>
+    {{else}}
+      <p class="alert alert-info">No custom pizzas found. Click the Build a Pizza tab to create one!</p>
+    {{/if}}
+  {{/each}}
+</tbody>
+</table>
+</div>
+</div>
+</template>

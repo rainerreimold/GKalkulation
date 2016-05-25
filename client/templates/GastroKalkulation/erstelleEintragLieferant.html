@@ -1,0 +1,138 @@
+<template name="erstelleLieferant">
+  <div class="panel-wrapper panel-default-wrapper rundung">
+   <div class="panel-heading">
+  <h2>Erstelle Lieferant</h2>
+  <br>
+  <form>
+    <div class="form-group">
+      <label>Name des lieferanten: </label>
+      <input type="text" class="problemBezeichnung" id="Bezeichnung" />
+    </div>
+    <br><br>
+    <h3>Adresse</h3>
+
+    <div class="form-group">
+      <h3>Adresse</h3>
+      <label>Strasse Hausnummer: </label>
+      <input type="text" class="forminput" id="Kurzbezeichnung" />
+    </div>
+
+    <div class="form-group">
+      <label>PLZ: </label>
+      <input type="text" class="forminputklein" id="Plz" />
+    </div>
+    <div class="form-group">
+      <label>Ort: </label>
+      <input type="text" class="forminputklein" id="Ort" />
+    </div>
+    <h3>Kontakt</h3>
+
+    <div class="form-group">
+      <label>Telefon: </label>
+      <input type="text" class="forminputklein" id="Telefon" />
+    </div>
+    <div class="form-group">
+      <label>Mailadresse: </label>
+      <input type="text" class="forminputklein" id="Mailadresse" />
+    </div>
+    <div class="form-group">
+      <label>Mobil: </label>
+      <input type="text" class="forminputklein" id="Mobil" />
+    </div>
+
+
+
+<!--
+
+    <div class="form-group">
+      <label>Gruppierung:</label>
+      <select class="form-select" id="priority">
+        <option>Tiefkühlware</option>
+        <option  selected>Frischware</option>
+        <option>Trockenware</option>
+        <option>Flüssigkeit</option>
+
+
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Artikelnummer: </label>
+      <input type="text" class="forminput" id="Artikelnummer" />
+    </div>
+
+
+        <div class="form-group">
+          <label>Kalorien je 100g: </label>
+          <input type="text" class="forminputklein" id="Kalorien" />
+        </div>
+        <div class="form-group">
+          <label>Kohlenhydrate je 100g: </label>
+          <input type="text" class="forminputklein" id="Kohlenhydrate" />
+        </div>
+        <div class="form-group">
+          <label>Zucker je 100g: </label>
+          <input type="text" class="forminputklein" id="Zucker" />
+        </div>
+        <div class="form-group">
+          <label>Eiweiß je 100g: </label>
+          <input type="text" class="forminputklein" id="Eiweiß" />
+        </div>
+        <div class="form-group">
+          <label>Broteinheiten je 100g: </label>
+          <input type="text" class="forminputklein" id="Broteinheiten" />
+        </div>
+-->
+
+<!--    <div class="form-group">
+      <label>Kurzbezeichnung: </label><br>
+      <textarea id="problemBeschreibung" class="Kurzbezeichnung"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>ProblemThema: </label>
+      <input type="text" class="forminput rundung" id="ProblemThema" />
+    </div> -->
+    <!--
+    <div class="form-group">
+      <label>ProblemTags: (durch Komma getrennt)</label>
+      <input type="text" class="forminput" id="ProblemKurzbezeichnung" />
+    </div>
+    -->
+
+    <!-- <input type="text" value="{{currentUser.user}}" id="currentUser" />  -->
+
+
+   <!-- <div class="form-group">
+      <label>Problem wurde angelegt: </label>
+      <input type="text" id="createDate"  value="sollte automatisch eingetragen werden."/>
+    </div> -->
+  <!--  <div class="form-group">
+      <label>F&auml;lligkeit zur L&ouml;sung: </label>
+      <input type="text" class="forminput rundung" id="dueDate"  value="7"/>&nbsp;Tag(e)
+    </div>
+    <div class="form-group">
+      <label>Priorit&auml;t:</label>
+      <select class="form-control rundung" id="priority">
+        <option>sofort</option>
+        <option>hoch</option>
+        <option selected>normal</option>
+        <option>gelegentlich </option>
+
+
+      </select>
+    </div>
+
+     <div class="form-group">
+      <label>Hinweise/Anmerkungen: </label><br>
+      <textarea id="problemHinweise" class="textarea1 rundung"></textarea>
+    </div>
+-->
+    <a href="/" type="button" class="btn btn-default">Abbruch</a>
+    <input type="submit" class="btn btn-primary" value="Anlegen">
+  </form>
+  <br><br>
+</div>
+</div>
+  <a href="../../">zur&uuml;ck</a>
+</template>

@@ -1,0 +1,77 @@
+<template name="rezept">
+
+
+<td>
+
+   <!--<a href="{{pathFor  'aendereRezept'  '_id'}}" class="btn btn-default btn-sm">{{rezeptBezeichnung}}-{{_id}} -->
+     <a href="/aendereRezept/{{_id}}" class="btn btn-default btn-sm">{{rezeptBezeichnung}}
+    <!--<span class="glyphicon glyphicon-pencil"></span>-->
+   </a>
+  </td>
+<td>{{#if WarenAngebotsPreisBrutto}}
+  {{ WarenAngebotsPreisBrutto}} &euro;
+{{/if}}</td>
+  <!-- <div class="panel panel-default pizza">
+    <div class="panel-body">
+      <p class="clearfix">
+
+        <strong class="pull-left">{{rezeptBezeichnung}} &mdash;
+          {{#if WarenAngebotsPreisBrutto}}
+            {{ WarenAngebotsPreisBrutto}} &euro;
+          {{/if}}
+          </strong>
+      </p>
+   -->
+  <!--    {{#if Zutaten.Hauptkomponente}}
+        {{Zutaten.Hauptkomponente.Name}}
+      {{/if}}
+      {{#if Zutaten.Garnitur}}
+        {{Zutaten.Garnitur.Name}}
+      {{/if}}
+      {{#if Zutaten.Saettigung1}}
+        {{Zutaten.Saettigung1.Name}}
+      {{/if}}
+      {{#if Zutaten.Gemuese1}}
+        {{Zutaten.Gemuese1.Name}}
+      {{/if}}
+      {{#if Zutaten.Sauce}}
+        {{Zutaten.Sauce.Name}}
+      {{/if}}
+-->
+    <!--  <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Hauptkomponente</th>
+            <th>Crust</th>
+            <th>Sauce</th>
+            <th>Meat Toppings</th>
+            <th>Non-Meat Toppigns</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{#if Zutaten.Hauptkomponente}}
+              {{Zutaten.Hauptkomponente.Name}}
+            {{/if}}</td>
+            <td>{{crust}}</td>
+            <td>{{sauce}}</td>
+            <td>
+              {{#if Zutaten.Hauptkomponente}}
+                {{toCommaString toppings.meats}}
+              {{else}}
+                <em>No meat toppings.</em>
+              {{/if}}
+            </td>
+            <td>
+              {{#if toppings.nonMeats}}
+                {{toCommaString toppings.nonMeats}}
+              {{else}}
+                <em class="text-muted">No non-meat toppings.</em>
+              {{/if}}
+            </td>
+          </tr>
+        </tbody>
+      </table> -->
+  <!--</div>
+  </div>  -->
+</template>

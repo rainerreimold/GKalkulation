@@ -1,0 +1,46 @@
+
+Um ein Datensatz unter Meteor in die MongoDB zu schreiben, der Unterkategorien enthält 
+
+
+erfolgt das Auslesen des Formulars:
+
+    var rezeptMProp = {
+      rezeptBezeichnung: $('#rezeptBezeichnung').val(),
+      rezeptKurzbezeichnung: $('#rezeptKurzbezeichnung').val(),
+      rezeptZubereitungsHinweise: $('#rezeptZubereitungsHinweise').val(),
+      rezeptZubereitungsdauer: $('#rezeptZubereitungsdauer').val(),
+      rezeptLevel: $('#rezeptLevel').val(),
+      Quelle: $('#Quelle').val(),
+			rezeptAngelegt: DatumZeit.toLocaleString(),
+			angelegt: DatumZeit,
+      		Zutaten: {
+			  Hauptkomponente: $('#Hauptbestandteil').val(),
+			  HauptkomponenteEinsatzmenge: $('#GewichtHauptbestandteil').val(),
+		  	  KilopreisHauptkomponente: $('#kilopreisHauptkomponente').val()
+		    }
+
+  }
+
+und das eigentliche Schreiben so:
+
+
+Meteor.methods({
+	updateRezept: function(rezeptId, rezeptMProp) {
+	//	check(Meteor.userId(), String);
+		check(rezeptMProp, {
+			rezeptBezeichnung: String,
+			rezeptKurzbezeichnung: String,
+			rezeptZubereitungsHinweise: String,
+            rezeptZubereitungsdauer: String,
+            rezeptLevel: String,
+            Quelle: String,
+			rezeptAngelegt: String,
+			angelegt: Date,
+			Zutaten: {
+				 Hauptkomponente: String,
+				 HauptkomponenteEinsatzmenge: String,
+				 KilopreisHauptkomponente: String
+			}
+
+
+		});

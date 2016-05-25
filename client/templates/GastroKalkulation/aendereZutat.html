@@ -1,0 +1,94 @@
+<template name="aendereZutat">
+  <div class="panel-wrapper panel-default-wrapper rundung">
+   <div class="panel-heading">
+  <!--<h2>Erstelle Zutat</h2> -->
+  <br>
+  <form>{{_Id}}
+    <input type="hidden" value="{{_Id}}" id="_Id" />
+    <div class="form-group">
+    <label>Zutat: </label>
+    <input type="text" class="forminput" id="Zutat" title="{{Zutat}}" value="{{Zutat}}" /><!-- value="Knödel"/> -->
+  </div>
+<!--  <div class="form-group">
+    <label>Gewicht: </label>
+    <input name="GewichtZutat" value="{{Gewicht}}" class="forminput" type="text" />
+  <!- -  <select class="form-select" id="GewichtZutat">
+      <option>20g</option>
+      <option>50g</option>
+      <option>100g</option>
+      <option selected>150g</option>
+      <option>180g</option>
+      <option>200g</option>
+      <option>250g</option>
+    </select> - ->
+  </div> -->
+  <p>Die Klassifikation oder Einordnung einer Speisekomponente ist nicht einfach.
+    Als Teil einer 2 oder 3 teiligen Hauptspeise kann die Unterteilung in Haupt,Sättigungs- und ggf. Gemüsenbeilage erfolgen.
+  <br><br/>
+ Aber was ist mit Suppe, Würzfleisch o.ä.
+ </p>
+  <div class="form-group">
+    <label>Art der Beilage: </label>
+
+    <select class="form-select" id="Beilagenart">
+      <option>Sättigungsbeilage</option>
+      <option>Hauptkomponente</option>
+      <option>Gemüsebeilage</option>
+      <option>Ragout</option>
+      <option>Fleisch</option>
+      <option>Fisch</option>
+      <option>Gemüse</option>
+      <option>Soße</option>
+      <option>Süßspeise</option>
+      </select>
+
+    </div>
+
+    <div class="form-group">
+
+    <label>Lebensmittelkategorie</label>
+    <select class="form-select" id="Lebensmittelkategorie">
+      <option>Getreide oder Getreideprodukt</option>
+      <option>Kartoffel oder Kartoffelprodukte</option>
+      <option>Obst, Obsterzeugnisse, Trockenobst</option>
+      <option>Gemüse & Hülsenfrüchte</option>
+      <option>Nüsse und Samen</option>
+      <option>Fleisch und Fleischwaren</option>
+      <option>Fisch und Fischprodukte</option>
+      <option>Milch und Milchprodukte</option>
+      <option>Eier und Eierspeisen</option>
+      <option>Öle und Fette</option>
+      <option>Süßwaren und Zucker</option>
+      <option>Konserven</option>
+      <option>Fertiggerichte</option>
+      <option>Saucen & Würzmittel</option>
+      <option>Gewürze & Kräuter</option>
+      <option>Alkoholfreie Getränke</option>
+      <option>Alkoholhaltige Getränke</option>
+    </select>
+  </div>
+
+    <div class="form-group">
+
+    <label>Zubereitungsart: </label>
+    <select class="form-select" id="Zubereitungsart">
+      <option>roh</option>
+      <option>pochiert</option>
+      <option>gekocht</option>
+      <option>fritiert</option>
+      <option>gebraten</option>
+      <option>pochiert</option>
+      <option>gedämpft</option>
+      <option>gebacken</option>
+      <option>sautiert</option>
+      </select>
+
+    </div>
+  <a href="/" type="button" class="btn btn-default">Abbruch</a>
+  <input type="submit" class="btn btn-primary" value="Anlegen">
+
+<br></form><br>
+</div>
+</div>
+<a href="../../">zur&uuml;ck</a>
+</template>

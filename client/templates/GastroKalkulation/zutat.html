@@ -1,0 +1,60 @@
+<template name="zutat">
+
+
+  <td>
+    <a href="{{pathFor  'aendereZutat'  '_id'}}" class="btn-default btn-sm">{{Zutat}}
+     <!--<span class="glyphicon glyphicon-pencil"></span>-->
+    </a></td>
+  <td>{{Lebensmittelkategorie}}</td>
+  <td>{{beilagenArt}}</td>
+  <td>{{zubereitungsArt}}</td>
+
+
+  <!--    {{#if Zutaten.Hauptkomponente}}
+        {{Zutaten.Hauptkomponente.Name}}
+      {{/if}}
+      {{#if Zutaten.Garnitur}}
+        {{Zutaten.Garnitur.Name}}
+      {{/if}}
+      {{#if Zutaten.Saettigung1}}
+        {{Zutaten.Saettigung1.Name}}
+      {{/if}}
+      {{#if Zutaten.Gemuese1}}
+        {{Zutaten.Gemuese1.Name}}
+      {{/if}}
+      {{#if Zutaten.Sauce}}
+        {{Zutaten.Sauce.Name}}
+      {{/if}} -->
+
+
+            <!--
+            <td>{{#if Zutaten.Hauptkomponente}}
+              {{Zutaten.Hauptkomponente.Name}}
+            {{/if}}</td>
+            <td>{{crust}}</td>
+            <td>{{sauce}}</td>
+            <td>
+              {{#if Zutaten.Hauptkomponente}}
+                {{toCommaString toppings.meats}}
+              {{else}}
+                <em>No meat toppings.</em>
+              {{/if}}
+            </td>
+            <td>
+              {{#if toppings.nonMeats}}
+                {{toCommaString toppings.nonMeats}}
+              {{else}}
+                <em class="text-muted">No non-meat toppings.</em>
+              {{/if}}
+            </td>
+          -->
+
+</template>
+
+<template name="zutatDetail">
+  <td>{{Zutat}}</td>
+  <td>{{beilagenArt}}</td>
+  <td>{{zubereitungsArt}}</td>
+  <td>{{Gewicht}}</td>
+
+</template>

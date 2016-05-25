@@ -1,0 +1,100 @@
+<template name="updateRezept">
+  <div class="panel-wrapper panel-default-wrapper rundung">
+   <div class="panel-heading">
+  <!--<h2>Erstelle Rezept</h2> -->
+  <br>
+  <form>
+    <div class="form-group">
+      <label>Name des Rezeptes : </label>
+      <input type="text" class="problemBezeichnung" id="rezeptBezeichnung" value="{{rezeptBezeichnung}}" />
+      <input type="hidden" id="rezept-id" value="{{keyString}}" />
+    </div>
+    <br><br>
+    <div class="form-group">
+      <label>Kurzbezeichnung: </label>
+      <input type="text" class="forminput" id="rezeptKurzbezeichnung" />
+    </div>
+  <!-- Zutat 1 -->
+  <div>
+<!--
+  {{#each Zutaten}}
+   {{> _zutatEintrag}}<br>
+  {{/each}}
+-->
+<!-- {{> _zutatEintrag}}<br>-->
+<!--<select>
+ Saettigung zutaten}}
+Gemueseon value="{{this}}">{{this}}</option>
+Sauceh}}
+ </select> -->
+ <br>
+ <table>
+  <tr><th colspan="2" class="tdkomponente">Komponente</th><th class="tdpreiseinsatz">Einsatzmenge</th><th class="tdpreiseinsatz">Kilopreis</th></tr>
+  <tr>{{> _zutatHauptbestandteil}}</tr>
+  <tr>{{> _zutatGarnitur}}</tr>
+  <tr>{{> _zutatSaettigung}}</tr>
+  <tr>{{> _zutatGemuese}}</tr>
+  <tr>{{> _zutatSauce}}</tr>
+</table>
+ </div>
+ <br>
+  <!-- <button class="addZutat">Add Zutat</button> -->
+
+    <div class="form-group">
+      <label>Zubereitungshinweise: </label><br>
+      <textarea id="rezeptZubereitungsHinweise" class="textarea1"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Zubereitungsdauer:</label>
+      <select class="form-select" id="rezeptZubereitungsdauer">
+        <option>10Min</option>
+        <option>15Min</option>
+        <option selected>20Min</option>
+        <option>25Min</option>
+        <option>30Min</option>
+        <option>40Min</option>
+        <option>45Min</option>
+        <option>50Min</option>
+        <option>1h</option>
+        <option>75Min</option>
+        <option>90Min</option>
+        <option>120Min</option>
+
+
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Schwierigkeitsgrad:</label>
+      <select class="form-select" id="rezeptLevel">
+        <option>sehr einfach</option>
+        <option>leicht</option>
+        <option selected>normal</option>
+        <option>schwierig</option>
+        <option>sehr schwierig</option>
+
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Quelle:</label>
+      <input type="text" class="forminput" id="Quelle" title="bspw. Chefkoch.de" />
+    </div>
+
+
+    <a href="/" type="button" class="btn btn-default">Abbruch</a>
+    <input type="submit" class="btn btn-primary" value="Anlegen">
+
+  <br></form><br>
+</div>
+</div>
+  <a href="../../">zur&uuml;ck</a>
+</template>
+
+<template name="aendereRezept">
+  <div class="panel-wrapper panel-default-wrapper rundung">
+   <div class="panel-heading">
+    <p class="mittig">Etwas zu ändern ohne ein Parameter mitzugeben, ist nicht wirklich sinnvoll !</p>
+ </div>
+</div>
+  <a href="../../">zur&uuml;ck</a>
+</template>

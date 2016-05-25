@@ -1,0 +1,78 @@
+{
+  "public": {
+    "kilopreis": {
+      "hauptbestandteil": [
+        "Kartoffeln",
+        "Klöße",
+        "Bratkartoffeln",
+        "Makaroni",
+        "Spätzle"
+      ],
+      "artikelnummer": [
+        "Banana Peppers",
+        "Green Peppers",
+        "Mushrooms",
+        "Black Olives",
+        "Onions",
+        "Feta Cheese",
+        "Jalapeno Peppers",
+        "Pineapple"
+      ]
+    },
+    "hauptbestandteil": [
+      "Kammsteak",
+      "Schnitzel",
+      "Rumpsteak",
+      "Medaillons",
+      "Entrecout",
+      "Chateaubriand",
+      "Porterhouse",
+      "T-Bone Steak"
+    ],
+    "garnitur": [
+      "keine",
+      "au four",
+      "Dubbary",
+      "Försterin",
+      "Zigeuner"
+    ],
+
+    "saettigung": [
+      "Salzkartoffeln",
+      "Rohe Klöße",
+      "Bratkartoffeln",
+      "Makaroni",
+      "Bandnudeln",
+      "Gnocci",
+      "Pommes Frites",
+      "Pommes Duchesse",
+      "Rote Linsen",
+      "Schupfnudeln",
+      "Kräuterspätzle",
+      "Semmelknödel"
+    ],
+    "gemuese": [
+      "Erbsen",
+      "Bohnen",
+      "Mangold",
+      "Spinat",
+      "Romanesco"
+    ],
+    "sauce": [
+      "Tomato",
+      "Roboust Tomato",
+      "Alfredo",
+      "Barbecue"
+   ],
+    "gewicht": [
+      80,
+      100,
+      120,
+      140,
+      160,
+      180,
+      200,
+      220
+    ]
+  }
+  }

@@ -1,0 +1,30 @@
+<template name="erstelleRezept">
+  <div class="panel-wrapper panel-default-wrapper rundung">
+   <div class="panel-heading">
+  <!--<h2>Erstelle Rezept</h2> -->
+  <br>
+  <form>
+    <div class="form-group">
+      <label>Name des Rezeptes : </label>
+      <input type="text" class="problemBezeichnung" id="rezeptBezeichnung" />
+    </div>
+    <br><br>
+    <div class="form-group">
+      <label>Kurzbezeichnung: </label>
+      <select id="speisenart">
+        <option value="Vorspeise">Vorspeise</option>
+        <option value="Suppe">Suppe</option>
+        <option value="Hauptgericht2" title="Bsp: Gulasch, Nudeln">Hauptgericht 2 Komponenten</option>
+        <option value="Hauptgericht3" title="Bsp: Gulasch, Rotkraut, Klöße">Hauptgericht 3 Komponenten</option>
+        <option value="Auflauf">Auflauf</option>
+        <option value="Dessert">Dessert</option>
+      </select>
+    </div>
+    <a href="/" type="button" class="btn btn-default">Abbruch</a>
+    <input type="submit" class="btn btn-primary" value="Anlegen">
+
+  <br></form><br>
+</div>
+</div>
+  <a href="../../">zur&uuml;ck</a>
+</template>

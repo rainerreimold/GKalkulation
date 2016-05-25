@@ -1,0 +1,38 @@
+<template name="layout">
+  <div class="container">
+    {{#if isAdminUser}}
+    <div style="text-align:center;">
+      <br><!--<a href="ticketAdmin">TicketVerwaltung</a>-->
+      <form><input type="submit" class="btn btn-primary" value="TicketVerwaltung"></form>
+      <br><small><small><small>{{isheute}}</small></small></small>
+    </div>
+    {{else}}
+    <div class="header">
+      <ul class="nav nav-pills pull-left"><li><small><small><small>{{isheute}}</small></small></small></li></ul>
+      <ul class="nav nav-pills pull-right">
+        <li><a href="../">Start</a></li>
+        <li><a href="/listeRezept">Rezepte</a></li>
+        <li><a href="/listeZutat">Zutaten</a></li>
+        {{#if isMelderUser}}<li><a href="/erstellen">Rezepte</a></li>{{/if}}
+        <li><div class="nav nav-pills">{{> loginButtons}}</div></li>
+
+      </ul>
+      <!--<img width="180px" src="ticketm_logo.png" alt="Logo TicketM" style="margin-bottom:100px;">-->
+      <h1>|<!--GastroKalkulation--></h1>
+    </div>
+    <div class="" style="margin:1pt 150pt auto 100pt; text-align:right;">
+      {{> yield}}
+    </div>
+    <div class="footer">
+      <ul class="nav nav-pills pull-left">
+
+        <li><a href="../impressum">Impressum</a></li>
+        <li><a href="../ueberuns">Über uns</a></li>
+    </ul>
+    <br><br><br>
+      <p>&copy;  R.Reimold</p>
+    </div>
+    {{/if}}
+  </div>
+
+</template>

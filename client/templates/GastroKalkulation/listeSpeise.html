@@ -1,0 +1,88 @@
+<template name="listeSpeise">
+	<!--{{#if isAdminUser}}
+
+	{{else}}
+	  {{#if isMelderUser}}
+	   {{> ticketMListInBearbeitungMeine}}
+    {{else}} -->
+
+
+
+	<!-- wenn Bearbeiter - dann weiter an StatusOffen -->
+
+	<!--{{#if isBearbeiterUser}}
+	<script>
+		document.write.ln('ich bin BEarbeiter');
+
+	</script>
+	{{/if}}-->
+
+
+	{{#if currentUser}}
+   <div class="panel-wrapper panel-default-wrapper rundung">
+    <div class="panel-heading">
+      Speisen Liste
+    {{#if currentUser}}
+       {{#if isBearbeiterUser}}
+          {{#if isAdminUser}}
+              <strong>&nbsp;-&nbsp;ADMIN</strong>&nbsp;
+          {{else}}
+              <strong>&nbsp;-&nbsp;Bearbeiter</strong>&nbsp;<br>
+							{{> ticketMListInBearbeitung}}<br>
+							{{> ticketMListOffen}}<br>
+          {{/if}}
+       {{else}}
+         {{#if isAdminUser}}
+              <strong>&nbsp;-&nbsp;ADMIN</strong>&nbsp;
+         {{else}}
+              <strong>&nbsp;-&nbsp;Melder</strong>&nbsp;<br>
+							<!--- hier soll die Mitteilung an den User rein -->
+							{{> mitteilungAnMelder}}<br>
+							{{> ticketMListInBearbeitungMeine}}<br>
+							{{> ticketMListOffenMeine}}<br>
+         {{/if}}
+       {{/if}}
+     {{/if}}
+		{{#if isMelderUser}}
+		<div>
+			<a href="/erstellen" class="btn btn-primary">
+				Neuer Eintrag
+			</a>
+		</div>
+		{{/if}}
+ </div>
+ {{#if isAdminUser}}
+   <span style="statusBearbeitung"><a href="statusBearbeitungAlle" title="alle sich in Bearbeitung befindlichen Tickets"><small><small><em>in Bearbeitung</em></small></small></a>&nbsp;</span>
+     &nbsp;|&nbsp;
+  {{/if}}
+  {{#if isMelderUser}}
+ <!--  <span style="statusBearbeitung"><a href="statusInBearbeitungMeine" title="alle sich in Bearbeitung befindlichen Tickets"><small><small><em>Meine Tickets in Bearbeitung</em></small></small></a>&nbsp;</span>
+     &nbsp;|&nbsp;
+   <span style="statusOffen"><a href="statusOffenMeine" title="alle offenen Tickets, die durch den angemeldeten Nutzer eingestellt wurden"><small><small><em>Offen</em></small></small></a>&nbsp;</span>
+     &nbsp;|&nbsp; -->
+   <span style="statusAbgeschlossen"><a href="statusAbgeschlossenMeine" title="alle offenen Tickets, die durch den angemeldeten Nutzer eingestellt wurden"><small><small><em>Abgeschlossen</em></small></small></a>&nbsp;</span>
+     &nbsp;|&nbsp;
+   <span style="statusZurueckGezogen"><a href="statusZurueckGezogenMeine" title="alle offenen Tickets, die durch den angemeldeten Nutzer eingestellt wurden"><small><small><em>Zur&uuml;ckgezogen</em></small></small></a>&nbsp;</span>
+  {{/if}}
+  {{#if isBearbeiterUser}}
+   <span style="statusBearbeitung"><a href="statusInBearbeitungBenutzer" title="meine noch in Bearbeitung befindlichen Tickets"><small><small><em>in Bearbeitung</em></small></small></a>&nbsp;</span>
+     &nbsp;|&nbsp;
+   <span style="statusOffen"><a href="statusOffen" title="alle sich noch nicht in Bearbeitung befindlichen Tickets"><small><small><em>offen</em></small></small></a>&nbsp;</span>
+  {{/if}}
+  </div>
+ <!--{{/if}} -->
+
+   {{else}}
+      <div class="not-found jumbotron">
+    <h2>Nicht angemeldet !</h2>
+    Bitte loggen Sie sich ein !  <br>Registrierung über "Join"!<br/><br/>
+ 	<small><small>Sie benötigen lediglich Email und Passwort</small></small>
+    </div>
+    {{/if}}
+ 	<!-- is melder -->
+
+
+ 	<!-- {{/if}} -->
+ 	<!--{{ifAdminTicketIsNotOk}} - - >
+ 	{{/if}} -->
+ </template>
